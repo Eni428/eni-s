@@ -7,34 +7,154 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <!-- Navigation Bar -->
-   <header>
-    <nav>
-        <div class="menu-toggle">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
-        <ul class="nav-list">
-            <li><a href="#home" data-key="home">Home</a></li>
-            <li><a href="#about" data-key="about">About</a></li>
-            <li><a href="#resume" data-key="resume">Resume</a></li>
-            <li><a href="#projects" data-key="projects">Projects</a></li>
-            <li><a href="#certifications" data-key="certifications">Certifications</a></li>
-            <li><a href="#contact" data-key="contact">Contact</a></li>
-            <!-- Language Toggle inside the same list -->
-            <li class="language-toggle">
-                <a href="#" id="translate-alb">
-                    <img src="albania.png" alt="Albanian" class="flag">
-                </a>
-                <a href="#" id="translate-eng">
-                    <img src="english.png" alt="English" class="flag">
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
+  <title>Responsive Navbar</title>
+    <style>
+        /* Base Styles for Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.7);
+        }
 
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            flex-direction: row; /* Horizontal layout for larger screens */
+        }
+
+        .nav-links li {
+            margin: 0 15px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            transition: background-color 0.3s; /* Smooth transition */
+        }
+
+        /* Change background color on hover */
+        .nav-links a:hover {
+            background-color: grey; /* Change to grey on hover */
+        }
+
+        /* Add this for active state on mobile */
+        .nav-links a:active {
+            background-color: grey; /* Change background to grey when pressed */
+        }
+
+        .hamburger {
+            display: none; /* Hide hamburger on larger screens */
+            cursor: pointer;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            transition: 0.3s;
+        }
+
+        /* Responsive for mobile devices */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Hide links by default */
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.8);
+            }
+
+            .nav-links li {
+                text-align: center;
+                margin: 15px 0;
+            }
+
+            .hamburger {
+                display: block; /* Show hamburger on mobile screens */
+            }
+
+            .nav-links.open {
+                display: flex; /* Show links when open */
+            }
+        }
+
+        .flag {
+            width: 20px; /* Adjust width as needed */
+            height: 20px; /* Adjust height as needed */
+            border-radius: 20%; /* This makes the border round */
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="hamburger" onclick="toggleNav()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" data-key="home">Home</a></li>
+                <li><a href="#about" data-key="about">About</a></li>
+                <li><a href="#resume" data-key="resume">Resume</a></li>
+                <li><a href="#projects" data-key="projects">Projects</a></li>
+                <li><a href="#certifications" data-key="certifications">Certifications</a></li>
+                <li><a href="#contact" data-key="contact">Contact</a></li>
+                <!-- Language Toggle inside the same list -->
+                <li class="language-toggle">
+                    <a href="#" id="translate-alb">
+                        <img src="assets/img/albania.png" alt="Albanian" class="flag">
+                    </a>
+                    <a href="#" id="translate-eng">
+                        <img src="assets/img/english.png" alt="English" class="flag">
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <script>
+        function toggleNav() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('open'); // Toggle the open class
+        }
+    </script>
+    </head>
+    <body>
+        
+     <!-- Home Section with Background Image -->
+     <section id="home" class="home-section">
+      <div class="overlay">
+          <div class="content">
+              <div class="profile-container">
+                <style>
+                  .white-text {
+                      color: white;
+                  }
+              </style>
+              
+              <h1 class="white-text">Enisa Shahini</h1>
+                 
+                  <p data-key="degree">Bachelor of Computer Science and Artificial Intelligence</p>
+              </div>
+          </div>
+      </div>
+  </section>
 
      <!-- Home Section with Background Image -->
      <section id="home" class="home-section">
