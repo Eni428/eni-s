@@ -1,0 +1,436 @@
+/* Include the autography font */
+@font-face {
+    font-family: 'Autography';
+    src: url('fonts/fonts/Autography.otf') format('truetype');
+}
+
+/* Navigation Bar Styles */
+header {
+    position: fixed; /* Make the nav bar fixed at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7); /* Add a slightly transparent background */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: rgba(249, 237, 237, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Navigation List */
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: rgba(249, 237, 237, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 500px) {
+    .nav-list {
+        display: none; /* Hide nav list by default */
+        flex-direction: column; /* Stack the items vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on your nav height */
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        z-index: 9;
+    }
+
+    .nav-list.active {
+        display: flex; /* Show nav list when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger icon */
+    }
+
+    li {
+        margin: 10px 0; /* Adjust spacing for vertical items */
+    }
+
+    a {
+        font-size: 1.2em; /* Adjust font size for mobile */
+        padding: 10px;
+    }
+
+    .language-toggle {
+        margin-top: 10px; /* Space above the language toggle */
+    }
+}/* Hamburger Menu Styles */
+.menu-toggle {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 4px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Navigation List */
+.nav-list {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+a:hover {
+    background-color: rgba(249, 237, 237, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .nav-list {
+        display: none; /* Hide nav list by default */
+        flex-direction: column; /* Stack the items vertically */
+        position: absolute;
+        top: 40px; /* Adjust based on your nav height */
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        width: 100%;
+        z-index: 9;
+    }
+
+    .nav-list.active {
+        display: flex; /* Show nav list when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the hamburger icon */
+    }
+
+    li {
+        margin: 10px 0; /* Adjust spacing for vertical items */
+    }
+
+    a {
+        font-size: 1.2em; /* Adjust font size for mobile */
+        padding: 10px;
+    }
+
+    .language-toggle {
+        margin-top: 10px; /* Space above the language toggle */
+    }
+}
+/* Language Toggle Styles */
+.language-toggle {
+    display: flex; /* Use flex to align flags */
+    align-items: center; /* Center align flags vertically */
+    margin-left: 20px; /* Space between the last nav item and the language flags */
+}
+
+.flag {
+    width: 22px;
+    height: 22px;
+    margin-left: 5px; /* Space between flags */
+    border-radius: 3px;
+}
+
+ 
+
+
+/* Home Section */
+.home-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('assets/img/first\ part1.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.content {
+    text-align: center;
+    color: white;
+}
+
+.content h1 {
+    font-family: 'Autography', cursive;
+    font-size: 4.5em; /* Slightly larger text */
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 1.7em;
+}
+
+
+/* About Me Section */
+.about-me-section {
+    display: flex;
+    max-width: 1200px;
+    margin: 40px auto;
+    border: 3px solid #dce3dd;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    height: auto; /* Auto height for content to expand naturally */
+}
+
+/* Left section for Skills */
+.left-section {
+    background-color: #b4b3ef;
+    color: white;
+    width: 40%; /* Adjusted for new content */
+    padding: 50px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+/* Skills title positioned more in the corner */
+.skills h2 {
+    margin-bottom: 10px;
+    font-size: 1em;
+    position: absolute;  /* To move it in the corner */
+    top: 8px;  /* Adjust as needed to move closer to the top */
+    left: 15px;  /* Adjust as needed to move closer to the left corner */
+}
+
+/* Skills list styling */
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to the left */
+    margin-top: 50px; /* Ensures space between "Skills" title and first item */
+}
+
+.skills ul li {
+    font-size: 1.1em; /* Adjusted font size for longer text */
+    font-weight: bold;
+    background-color: #eca5c9;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Space between items */
+    display: inline-block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Pink hover effect for skills buttons */
+.skills ul li:hover {
+    background-color: #FF69B4;  /* Pink color on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.skills-button {
+    background-color: #b1dcb3; /* Olive green button color */
+    color: white;
+    border: none; /* Remove default border */
+    border-radius: 50px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for the button */
+    font-size: 1.8em; /* Match the h2 font size */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Transition for background color */
+}
+
+/* Hover effect for skills button */
+.skills-button:hover {
+    background-color: #9fd5c0; /* Darker olive green on hover */
+}
+
+
+
+
+/* Right section for About Me text */
+.right-section {
+    background-color: #e6e6e6;
+    width: 60%; /* Adjusted for new space */
+    padding: 50px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+}
+
+.right-section h2 {
+    margin-top: 0;
+    font-size: 2.5em;
+}
+
+.right-section p {
+    line-height: 1.8;
+    font-size: 1.2em;
+}
+
+/* Responsive for smaller screens */
+@media screen and (max-width: 768px) {
+    .about-me-section {
+        flex-direction: column;
+        height: auto;
+    }
+    .left-section, .right-section {
+        width: 100%;
+    }
+    .skills ul {
+        align-items: center;
+    }
+}
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px; /* Set a max width for larger screens */
+    margin: 0 auto; /* Center the container */
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin: 20px -10px; /* Adjust margins to accommodate column padding */
+}
+
+.col-lg-6 {
+    flex: 1; /* Allow both columns to have equal width */
+    padding: 10px; /* Adjusted padding for responsiveness */
+    background-color: #fff;
+    margin: 10px; /* Add some margin between columns */
+    border-radius: 5px; /* Add rounded corners */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .col-lg-6 {
+        flex: 100%; /* Stack columns on small screens */
+    }
+}
+
+.resume-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #0056b3; /* Change title color */
+}
+
+.resume-item {
+    margin-bottom: 15px;
+}
+
+h4 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    color: #333; /* Darker color for section headings */
+}
+
+h5 {
+    font-size: 1em;
+    color: #777; /* Lighter color for date */
+}
+
+ul {
+    list-style-type: disc; /* Use disc bullets */
+    margin-left: 5px; /* Indent list */
+}
+
+ul li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+p {
+    margin: 10px 0; /* Space above and below paragraphs */
+}
